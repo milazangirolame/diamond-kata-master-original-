@@ -1,6 +1,9 @@
 class Diamond
 
-  def build(c)
+  def build(char)
+    if char == 'A'
+      char + "\n"
+    end
 
   end
 
