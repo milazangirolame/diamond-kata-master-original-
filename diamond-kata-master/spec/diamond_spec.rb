@@ -44,6 +44,7 @@ RSpec.describe Diamond do
         _________A_________
       EXAMPLE
     end
+
   end
 
 end

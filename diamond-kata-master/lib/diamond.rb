@@ -6,7 +6,7 @@ class Diamond
     total = a.length
     triangle = ""
     while total > 1
-      triangle << build_line(a[n], total, n)
+      triangle << build_line(a[n], total, n) + "\n"
       total -=1
       n +=1
     end
@@ -20,15 +20,14 @@ class Diamond
 
   def build_line(current_char, total, n)
     if n == 0
-      '_'*(total -1) + current_char  + '_'*(total -1) + "\n"
+      '_'*(total -1) + current_char  + '_'*(total -1)
      else
-    '_'*(total -1) + current_char + "_"*(n*2 - 1) + current_char + '_'*(total -1) + "\n"
+    '_'*(total -1) + current_char + "_"*(n*2 - 1) + current_char + '_'*(total -1)
     end
   end
 
   def build_base(char, total)
-    i = total -1
-    char + '_'*(2*i-1) + char
+    char + '_'*(2*(total -1)-1) + char
   end
 
 end
