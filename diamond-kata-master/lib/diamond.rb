@@ -13,21 +13,19 @@ class Diamond
      if char == 'A'
        char + "\n"
      else
-      triangle + build_base(char, a.length) + triangle.reverse! + "\n"
+      triangle + build_line(a[n], total, n) + triangle.reverse! + "\n"
      end
   end
 
-
   def build_line(current_char, total, n)
+    u = '_'*(total -1)
+    c = current_char
+    result = u + c
     if n == 0
-      '_'*(total -1) + current_char  + '_'*(total -1)
-     else
-    '_'*(total -1) + current_char + "_"*(n*2 - 1) + current_char + '_'*(total -1)
+      result + u
+    else
+      result + "_"*(n*2 - 1) + result.reverse
     end
-  end
-
-  def build_base(char, total)
-    char + '_'*(2*(total -1)-1) + char
   end
 
 end
