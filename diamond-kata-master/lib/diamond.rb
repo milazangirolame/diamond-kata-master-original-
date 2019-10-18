@@ -19,8 +19,7 @@ class Diamond
 
   def build_line(current_char, total, n)
     u = '_'*(total -1)
-    c = current_char
-    result = u + c
+    result = u + current_char
     if n == 0
       result + u
     else
